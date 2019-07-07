@@ -1,0 +1,101 @@
+<div class="bg-img">
+  <div class="header">TekSmart Logistics</div>
+  <div class="page">
+    <div style="padding: 20px;">
+      <div class="signbody">
+        <form #loginForm="ngForm" (submit)="login()"><br>
+          <div class="row">
+            <div class="inner-addon left-addon col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <input type="text" class="iy" placeholder="Enter First Name" [(ngModel)]="user.firstName" id="firstName"
+                name="firstName">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <input type="text" class="iy" placeholder="Enter Last Name" [(ngModel)]="user.lastName" id="lastName"
+                name="lastName" #lastName="ngModel">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <input type="text" class="iy" placeholder="Enter Contact Number" [(ngModel)]="user.contactNo"
+                id="contactNo" name="contactNo" #contactNo="ngModel">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <input type="text" class="iy" placeholder="Enter Email Id" [(ngModel)]="user.emailId" id="emailId"
+                name="emailId" #emailId="ngModel">
+            </div>
+          </div>
+          <div class="row inner-addon left-addon">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <input type="text" class="iy" placeholder="Enter Date of Birth" [(ngModel)]="user.dateOfBirth"
+                id="dateOfBirth" name="dateOfBirth" #dateOfBirth="ngModel">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <input type="text" class="iy" placeholder="Enter Blood Group" [(ngModel)]="donor.bloodGroup"
+                id="bloodGroup" name="bloodGroup" #bloodGroup="ngModel">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <input type="text" class="iy" placeholder="Enter Age" [(ngModel)]="donor.age" id="age" name="age"
+                #age="ngModel">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <input type="text" class="iy" placeholder="Enter Address" [(ngModel)]="user.address" id="address"
+                name="address" #address="ngModel">
+            </div>
+          </div>
+          <div class="row inner-addon left-addon">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <input type="text" class="iy" placeholder="Select City" [(ngModel)]="donorBlood.city" id="city"
+                name="city" #city="ngModel">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <input type="text" class="iy" placeholder="Enter the number of donations"
+                [(ngModel)]="donorBlood.frequency" id="frequency" name="frequency" #frequency="ngModel">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <input type="text" class="iy" placeholder="Enter date of last donation"
+                [(ngModel)]="donorBlood.dateOfBloodDonation" id="dateOfBloodDonation" name="dateOfBloodDonation"
+                #lastDonatedDate="ngModel">
+            </div>
+          </div>
+          <div class="searchDonor">
+            <button type="submit" class="btn btn-success">Search Donor</button>
+          </div>
+        </form>
+      </div><br>
+    </div>
+  </div>
+</div>
+<div class="results" *ngIf="submitted">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Contact Number</th>
+        <th scope="col">Email ID</th>
+        <th scope="col">Address</th>
+        <th scope="col">City</th>
+        <th scope="col">Date of Birth</th>
+        <th scope="col">Age</th>
+        <th scope="col">Blood Group</th>
+        <th scope="col">Date of Last Donation</th>
+        <th scope="col">Frequency</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>{{ donorBlood.donor.user.firstName }}</td>
+        <td>{{ donorBlood.donor.user.lastName }}</td>
+        <td>{{ donorBlood.donor.user.contactNo }}</td>
+        <td>{{ donorBlood.donor.user.emailId }}</td>
+        <td>{{ donorBlood.donor.user.address }}</td>
+        <td>{{ donorBlood.city }}</td>
+        <td>{{ donorBlood.donor.user.dateOfBirth }}</td>
+        <td>{{ donorBlood.donor.age }}</td>
+        <td>{{ donorBlood.donor.bloodGroup }}</td>
+        <td>{{ donorBlood.dateOfBloodDonation }}</td>
+        <td>{{ donorBlood.frequency }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

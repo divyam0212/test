@@ -1,0 +1,86 @@
+<div class="bg-img">
+    <div class="header">TekSmart Logistics</div>
+    <div class="page" *ngIf="!submitted">
+        <div style="padding: 20px;">
+            <div class="signbody">
+                <form #loginForm="ngForm" (submit)="searchDonor()"><br>
+                    <div class="row">
+                        <div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <!-- <label for="firstName">First Name:</label> -->
+                            <input type="text" class="form-control" placeholder="Enter First Name"
+                                [(ngModel)]="user.firstName" id="firstName" name="firstName">
+                        </div>
+                        <div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <input type="text" class="form-control" placeholder="Enter Last Name"
+                                [(ngModel)]="user.lastName" id="lastName" name="lastName" #lastName="ngModel">
+                        </div>
+                        <div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <input type="text" class="form-control" placeholder="Enter Contact Number"
+                                [(ngModel)]="user.contactNo" id="contactNo" name="contactNo" #contactNo="ngModel">
+                        </div>
+                        <div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <input type="text" class="form-control" placeholder="Enter Email Id"
+                                [(ngModel)]="user.emailId" id="emailId" name="emailId" #emailId="ngModel">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <input type="text" class="form-control" placeholder="Enter Date of Birth"
+                                [(ngModel)]="user.dateOfBirth" id="dateOfBirth" name="dateOfBirth"
+                                #dateOfBirth="ngModel">
+                        </div>
+                        <div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <input type="text" class="form-control" placeholder="Enter Blood Group"
+                                [(ngModel)]="donor.bloodGroup" id="bloodGroup" name="bloodGroup" #bloodGroup="ngModel">
+                        </div>
+                        <div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <input type="text" class="form-control" placeholder="Enter Age" [(ngModel)]="donor.age"
+                                id="age" name="age" #age="ngModel">
+                        </div>
+                        <div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <input type="text" class="form-control" placeholder="Enter Address"
+                                [(ngModel)]="user.address" id="address" name="address" #address="ngModel">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <input type="text" class="form-control" placeholder="Select City"
+                                [(ngModel)]="donorBlood.city" id="city" name="city" #city="ngModel">
+                        </div>
+                        <div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <input type="text" class="form-control" placeholder="Enter the number of donations"
+                                [(ngModel)]="donorBlood.frequency" id="frequency" name="frequency" #frequency="ngModel">
+                        </div>
+                        <div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <input type="text" class="form-control" placeholder="Enter date of last donation"
+                                [(ngModel)]="donorBlood.dateOfBloodDonation" id="dateOfBloodDonation"
+                                name="dateOfBloodDonation" #lastDonatedDate="ngModel">
+                        </div>
+                    </div>
+                    <div class="searchDonor">
+                        <button type="submit" class="btn btn-success">Search Donor</button>
+                    </div>
+                </form>
+            </div><br>
+        </div>
+    </div>
+    <div class="results" *ngIf="submitted">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12" *ngFor="let donorBlood of donors">
+                <div class="card">
+                    <div class="card-header">
+                        <span>{{donorBlood.donor.user.firstName}}&nbsp;{{donorBlood.donor.user.lastName}}</span>
+                    </div>
+                    <div class="card-body">
+                        {{donorBlood.donor.user.firstName}}&nbsp;{{donorBlood.donor.user.lastName}} <br>
+                        {{donorBlood.donor.user.contactNo}} &nbsp; {{donorBlood.donor.user.emailId}} <br>
+                        {{donorBlood.donor.user.dateOfBirth}} &nbsp; {{donorBlood.donor.age}} <br>
+                        {{donorBlood.donor.bloodGroup}} &nbsp; {{donorBlood.donor.user.address}} <br>
+                        {{donorBlood.city}} &nbsp; {{donorBlood.frequency}} &nbsp; {{donorBlood.dateOfBloodDonation}}
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

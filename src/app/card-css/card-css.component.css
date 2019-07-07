@@ -1,0 +1,266 @@
+.row {
+    margin: 10px;
+}
+
+.page {
+    background: white;
+    width: 100%;
+    box-shadow: 0px 8px 8px 5px rgba(192, 192, 192, 0.2);
+    position: fixed;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.buttons {
+    width: 50%;
+    font-size: 17px;
+    font-weight: 500;
+    color: grey;
+    padding: 10px;
+    border: none;
+    background: white;
+    cursor: pointer;
+}
+
+.form-control {
+    font-size: 16px;
+    padding-left: 40px;
+    padding-top: 0;
+    width: 100%;
+    background: #f3f7f7;
+    border: none;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.form-control:focus {
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+.box {
+    margin: 1%;
+    border: none;
+    margin-bottom: 10px;
+    background: #f3f7f7;
+    box-shadow: inset 0 1px 4px rgba(115, 143, 147, .25)
+}
+
+.checkremember {
+    margin: 2%;
+    border: none;
+    margin-bottom: 15px;
+}
+
+.box:hover {
+    border-bottom: 2px solid #39424e;
+}
+
+input::placeholder {
+    color: #1a1a00;
+    font-size: 16px;
+}
+
+glyphicon-align {
+    background: black;
+}
+
+.icon {
+    position: relative;
+    margin-top: 5px;
+}
+
+.signbody {
+    height: 100%;
+    overflow: hidden;
+    text-align: left;
+}
+
+.forget {
+    color: red;
+    float: right;
+}
+
+.input-buttons {
+    text-align: center;
+}
+
+.registerUser {
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.error {
+    color: red;
+    text-align: center;
+}
+
+.header {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    background-color: #0039a6;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10x;
+    width: 100%;
+    position: relative;
+}
+
+.btn {
+    width: 20%;
+}
+
+.btn-default {
+    width: 20%;
+    background-color: lightgray;
+    color: white;
+}
+
+.btn-success {
+    width: 20%;
+    background-color: #00b140;
+    color: white;
+}
+
+.containers {
+    display: inline;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 17px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* Hide the browser's default radio button */
+
+.containers input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+/* Create a custom radio button */
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+
+/* On mouse-over, add a grey background color */
+
+.containers:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+
+/* When the radio button is checked, add a blue background */
+
+.containers input:checked~.checkmark {
+    background-color: #F6A757;
+}
+
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the indicator (dot/circle) when checked */
+
+.containers input:checked~.checkmark:after {
+    display: block;
+}
+
+
+/* Style the indicator (dot/circle) */
+
+.containers .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.typeUser {
+    text-align: center;
+    margin: 10px;
+}
+
+label {
+    font-weight: 400;
+}
+
+.alert {
+    text-align: center;
+    margin: 10px;
+}
+
+
+/* enable absolute positioning */
+
+.inner-addon {
+    position: relative;
+}
+
+
+/* style glyph */
+
+.inner-addon .glyphicon {
+    position: absolute;
+    padding: 20px;
+    pointer-events: none;
+}
+
+
+/* align glyph */
+
+.left-addon .glyphicon {
+    left: 0px;
+}
+
+
+/* add padding  */
+
+.left-addon input {
+    padding-left: 40px;
+}
+
+.searchDonor {
+    text-align: center;
+    margin: 20px;
+}
+.results{
+    margin:20px;
+}
+.card-header{
+    background-color: #bb0a1e;
+    color:white;
+}
+.card{
+    margin: 10px;
+    border: grey;
+}
+.card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}

@@ -1,0 +1,31 @@
+.container-fluid {
+  margin:auto;
+}
+
+.form-control {
+	height: 30px !important;
+}
+
+.btn-success {
+	width: 50%;
+	background-color: #00b140;
+	color: white;
+}
+
+.btn {
+  width: 20%;
+}
+
+.searchDonor {
+	text-align: center;
+}
+
+table{
+  width:100%;
+}
+.results{
+  margin-top: 20px;
+}
+input :read-only{
+  cursor: none;
+}
